@@ -1,0 +1,13 @@
+
+<p-toast position="center"></p-toast>
+<section id="gallery" class="gallery container-fluid wow fadeInUp" data-wow-delay="0.9s">
+    <h1 class="text-center mb-4">گالری</h1>
+    <p-carousel [value]="images" [numVisible]="4" [numScroll]="1" [responsiveOptions]="responsiveOptions"
+        [autoplayInterval]="5000">
+        <ng-template let-image pTemplate="item">
+            <div class="text-center">
+                <img [src]="image.image" [alt]="image.imageAlt" />
+            </div>
+        </ng-template>
+    </p-carousel>
+</section>

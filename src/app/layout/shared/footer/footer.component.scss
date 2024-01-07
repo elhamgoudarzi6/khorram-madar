@@ -1,0 +1,51 @@
+.footer {
+  margin-top: 2rem;
+  padding-top: 6rem;
+  background:
+      url(../../../../assets/images/bg-top.png);
+        background-position:
+      center top,
+      center center;
+  background-repeat: no-repeat;
+  background-color: #20b66f;
+  font-family: IRANSans_Light !important;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  padding: 5px ;
+}
+
+.footer .text{
+  margin-top: 90px;
+  font-size: 14px;
+  color: #fff;
+  font-family: IRANSans_Light !important;
+}
+@media (max-width: 991px) {
+  .footer .text{
+    font-size: 12px;
+  }
+}
+
+.footer .social-links {
+  margin: 0 0 5px 0;
+}
+
+.footer .social-links a {
+  font-size: 20px;
+  display: inline-block;
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 3px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+
+.footer .social-links a:hover {
+  background: #034626;
+}
+

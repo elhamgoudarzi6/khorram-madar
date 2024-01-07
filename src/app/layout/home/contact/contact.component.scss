@@ -1,0 +1,275 @@
+h1 {
+    font-family: IRANSans_Bold !important;
+  }
+  
+  .service-item {
+    border-radius: 39px;
+    box-shadow: 0 0 45px rgba(0, 0, 0, .07);
+    background-color: #e5f1e7;
+    padding: 5px 30px 15px;
+  }
+  
+  
+  
+  h3 {
+    font-family: IRANSans_Bold !important;
+    color: #000;
+  }
+  
+  i {
+    color: #fff;
+    font-size: 30px;
+  }
+  
+  .service-text p {
+    margin-top: -10px;
+    font-family: IRANSans_Bold !important;
+    color: #777;
+    text-align: center;
+  }
+  
+  .service-item .service-text .service-icon {
+    width: 60px;
+    height: 60px;
+    padding: 15px;
+    margin-right: -15px;
+    margin-top: -30px;
+    margin-bottom: 10px;
+    background: #20b66f;
+    border-radius: 140px;
+    overflow: hidden;
+    box-shadow: 0 0 60px rgba(0, 0, 0, .1);
+    color: #fff;
+  }
+  
+  .service-item .service-text h3,
+  .service-item .service-text p {
+    transition: .5s;
+  
+  }
+  
+  
+  
+  
+  ul,
+  li {
+    margin: 0px;
+    list-style-type: none;
+  }
+  
+  
+  input {
+    outline: none;
+    border: none;
+  }
+  
+  textarea {
+    outline: none;
+    border: none;
+  }
+  
+  
+  .contact1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container-contact1 {
+    width: 1135px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 90px 130px 88px 148px;
+  }
+  
+  
+  .contact1-pic {
+    width: 450px;
+  
+  
+  }
+  
+  .contact1-pic img {
+    max-width: 100%;
+  }
+  
+  .contact1-form {
+    width: 390px;
+  }
+  
+  input.input1 {
+    height: 45px;
+    border-radius: 25px;
+    padding: 0 30px;
+    font-family: 'IRANSans_Light' !important;
+  }
+  
+  textarea.input1 {
+    min-height: 150px;
+    border-radius: 25px;
+    padding: 12px 30px;
+    font-family: 'IRANSans_Light' !important;
+  }
+  
+  textarea.input1+.shadow-input1 {
+    border-radius: 25px;
+  }
+  
+  
+  .wrap-input1 {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    margin-bottom: 20px;
+  }
+  
+  .input1 {
+    display: block;
+    width: 100%;
+    background: #f7f7f7;
+    font-family: Montserrat-Bold;
+    font-size: 15px;
+    line-height: 1.5;
+  
+  }
+  
+  
+  .btn {
+    min-width: 193px;
+    height: 50px;
+    border-radius: 25px;
+    background: #20b66f;
+    font-family: Montserrat-Bold;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #fff;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 25px;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+  }
+  
+  .btn {
+    margin-left: 7px;
+    font-family: 'IRANSans_Bold' !important;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+  }
+  
+  .btn:hover {
+    background: #0a0a0a;
+    color: #fff;
+  }
+
+  
+  @media (max-width: 1200px) {
+    .contact1-pic {
+      width: 33.5%;
+    }
+  
+    .contact1-form {
+      width: 44%;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .container-contact1 {
+      padding: 90px 80px 88px 90px;
+    }
+  
+    .contact1-pic {
+      width: 35%;
+    }
+  
+    .contact1-form {
+      width: 55%;
+    }
+  }
+  :host::ng-deep .p-toast .p-toast-message.p-toast-message-success .p-toast-message-icon, .p-toast .p-toast-message.p-toast-message-success .p-toast-icon-close{
+    margin-left: 10px;
+    
+  }
+  :host::ng-deep.p-toast .p-toast-message .p-toast-message-content .p-toast-summary {
+    font-family: 'IRANSans_Bold' !important;
+    margin-top: 10px;
+  }
+  ul li{
+    font-family: 'IRANSans_Light' !important;
+    margin-top: 12px;
+    text-align: right;
+  }
+  @media (max-width: 768px) {
+    .container-contact1 {
+      padding: 90px 80px 88px 80px;
+    }
+  
+    .contact1-pic {
+      display: none;
+    }
+  
+    .contact1-form {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .container-contact1 {
+      padding: 90px 15px 88px 15px;
+    }
+  }
+  
+  
+  
+  
+  .validate-input {
+    position: relative;
+  }
+  
+  
+  
+  .alert-validate:hover:before {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  @media (max-width: 992px) {
+    .alert-validate::before {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+
+  :host::ng-deep .p-button {
+    background-color: #20b66f;
+    border-color: #20b66f;
+    border-radius: 30px;
+  }
+  
+  :host::ng-deep .p-button:hover {
+    background-color: #20b66f;
+    border-color: #20b66f;
+  }
+  :host::ng-deep .p-button .p-button-label {
+    font-family: IRANSans_Bold !important;
+    font-size: 16px;
+  }

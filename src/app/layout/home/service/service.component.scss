@@ -1,0 +1,133 @@
+
+// #more-features {
+//   padding: 30px 0 30px 0;
+//   overflow: hidden;
+// }
+// #more-features h3 {
+//   font-size: 23px;
+//   font-family: 'IRANSans_Bold' !important;
+//   text-align: center;
+//   margin-bottom: 30px;
+//   color: #777;
+// }
+// #more-features .box {
+//   padding: 40px 40px 20px;
+//   margin-bottom: 30px;
+//   box-shadow: 0px 0px 10px rgba(73, 78, 92, 0.05);
+//   background: #fff;
+//   transition: 0.4s;
+//   height: 100%;
+//   border-radius: 10px;
+// }
+
+// #more-features .icon {
+//   float: right;
+// }
+
+// #more-features .icon i {
+//   color: #666666;
+//   font-size: 80px;
+//   transition: 0.5s;
+//   line-height: 0;
+// }
+
+// #more-features .icon i:before {
+//   background: #1dc8cd;
+//   // background: linear-gradient(45deg, #1dc8cd 0%, #55fabe 100%);
+//  // background: linear-gradient(45deg, #ffe134 0%, #ffbf2e 100%);
+//   background: linear-gradient(45deg, #ffe134 0%, #ff9e28 100%);
+
+//   background-clip: border-box;
+//   -webkit-background-clip: text;
+//   -webkit-text-fill-color: transparent;
+// }
+
+// #more-features h4 {
+//   margin-right: 100px;
+//   font-weight: 700;
+//   margin-bottom: 15px;
+//   font-size: 18px;
+//   font-family: 'IRANSans_Bold' !important;
+
+// }
+
+// #more-features h4 a {
+//   color: #666;
+// }
+
+// #more-features p {
+//   font-size: 14px;
+//   margin-right: 100px;
+//   margin-bottom: 0;
+//   line-height: 24px;
+//   font-family: 'IRANSans_Light' !important;
+
+// }
+
+// @media (max-width: 767px) {
+//   #more-features .box {
+//     margin-bottom: 20px;
+//   }
+
+//   #more-features .icon {
+//     float: none;
+//     text-align: center;
+//     padding-bottom: 15px;
+//   }
+
+//   #more-features h4,
+//   #more-features p {
+//     margin-right: 0;
+//     text-align: center;
+//   }
+// }
+section{
+ 
+  background-color: rgba(0, 0, 0, 0.966);
+  padding: 25px 0;
+  font-size: 16px;
+  line-height: 23px;
+  scroll-behavior: smooth;
+  
+  }
+  .text-custom{
+  color: #fff ;
+  }
+
+  
+  h5{
+    font-size: 23px;
+    font-family: 'IRANSans_Bold' !important;
+    text-align: right;
+    margin-bottom: 20px;
+    color: #fff;
+  
+  }
+  #service{
+    color: aliceblue;
+  }
+  
+  
+  
+  p{
+    color: #fff;
+    text-align: justify;
+    font-family: IRANSans_Light !important;
+  
+  }
+ 
+  h6{
+    color: #fff;
+    font-family: IRANSans_Light !important;
+  
+  }
+  .grow img{
+    transition: 1s ease;
+    }
+    
+    .grow img:hover{
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+    transition: 1s ease;
+    }

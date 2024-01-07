@@ -1,0 +1,65 @@
+p {
+  font-family: IRANSans_Light !important;
+  font-size: 18px;
+  line-height: 32px;
+  text-align: justify;
+}
+
+h1 {
+  font-family: IRANSans_Bold !important;
+  font-size: 25px;
+}
+
+
+.btn {
+  transition: .5s;
+  background-color: #ffff;
+  color: #20b66f;
+  font-family: IRANSans_Bold !important;
+  margin-top: 20px;
+  border-radius: 30px;
+  padding: 8px 35px;
+}
+
+.btn:hover {
+  background-color: #20b66f;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+
+
+/*** Hero Header ***/
+.hero-header {
+  margin-bottom: 3rem;
+  padding: 5rem 0;
+  background:
+    url(../../../../assets/images/blob-top-left.png),
+    url(../../../../assets/images/blob-top-right.png),
+    url(../../../../assets/images/blob-bottom-left.png),
+    url(../../../../assets/images/blob-bottom-right.png),
+    url(../../../../assets/images/blob-center.png),
+    url(../../../../assets/images/bg-bottom.png);
+  background-position:
+    left 0px top 0px,
+    right 0px top 0px,
+    left 0px bottom 0px,
+    right 0px bottom 0px,
+    center center,
+    center bottom;
+  background-repeat: no-repeat;
+  background-color: #20b66f;
+}
+
+@media (max-width: 991px) {
+  .hero-header {
+    padding: 6rem 0 9rem 0;
+  }
+  h1{
+    padding-top: 20px;
+  }
+
+  .printed {
+    display: none;
+  }
+}

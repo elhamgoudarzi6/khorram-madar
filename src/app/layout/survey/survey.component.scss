@@ -1,0 +1,80 @@
+:host::ng-deep .p-panel {
+    border-color: #20b66f;
+}
+
+:host::ng-deep .p-panel .p-panel-header {
+    color: #fff !important;
+    font-family: IRANSans_Bold !important;
+    background: #20b66f;
+}
+
+:host::ng-deep .p-datatable .p-datatable-thead>tr>th {
+    font-size: 13px;
+    text-align: center;
+}
+
+:host::ng-deep .p-rating .p-rating-icon:first-child {
+    margin-left: 5px;
+}
+
+:host::ng-deep .p-datatable .p-datatable-tbody>tr>td {
+    font-family: IRANSans_Bold !important;
+    font-size: 14px;
+    text-align: right;
+    color: #888 !important;
+    padding: 5px;
+}
+
+:host::ng-deep .p-divider {
+    height: 0px;
+}
+
+input,
+:host::ng-deep .p-inputtext,
+:host::ng-deep .p-dropdown,
+:host::ng-deep .p-chips,
+.p-inputtext,
+.p-dropdown,
+.p-chips,
+textarea {
+    width: 100% !important;
+}
+
+h1 {
+    font-family: IRANSans_Bold !important;
+    font-size: 18px;
+}
+
+textarea {
+    font-family: IRANSans_Bold !important;
+    font-size: 14px;
+}
+
+:host::ng-deep .p-button {
+    font-size: 14px;
+    font-family: IRANSans_Bold !important;
+    background-color: #20b66f;
+    border-color: #20b66f;
+    padding: 10px 35px;
+}
+
+:host::ng-deep .p-button:hover {
+    background-color: #20b66f;
+    border-color: #20b66f;
+}
+
+:host::ng-deep .p-button .p-button-icon-left {
+    margin-left: 5px;
+}
+
+:host::ng-deep .p-toast-summary {
+    font-size: 14px;
+    font-family: IRANSans_Bold !important;
+    margin-right: 5px;
+}
+
+@media (max-width: 991px) {
+    .vertical {
+        display: none;
+    }
+}

@@ -1,0 +1,117 @@
+:host::ng-deep .p-button {
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-family: IRANSans_Bold !important;
+  background-color: #20b66f;
+  border-color: #20b66f;
+  padding: 10px 65px;
+}
+
+:host::ng-deep .p-button:hover {
+  background-color: #20b66f;
+  border-color: #20b66f;
+}
+
+:host::ng-deep .p-panel {
+  border-color: #20b66f;
+
+}
+
+:host::ng-deep .p-panel img {
+  max-width: 250px;
+}
+
+:host::ng-deep .p-panel .p-panel-header {
+  background: #20b66f;
+  border-top-left-radius: 15px !important;
+  border-top-right-radius: 15px !important;
+}
+
+:host::ng-deep .p-panel .p-panel-content {
+  padding: 5px 50px;
+}
+
+:host::ng-deep .p-panel .p-panel-footer {
+  text-align: center;
+  background: #20b66f;
+  color: #fff;
+  font-family: IRANSans_Light !important;
+  border-bottom-left-radius: 15px !important;
+  border-bottom-right-radius: 15px !important;
+}
+
+:host::ng-deep .p-toast .p-toast-message .p-toast-message-content .p-toast-summary {
+  font-size: 16px;
+  font-family: IRANSans_Light !important;
+  margin-right: 5px;
+}
+
+:host::ng-deep .p-toast .p-toast-message .p-toast-message-content .p-toast-detail {
+  font-size: 16px;
+  font-family: IRANSans_Light !important;
+}
+
+:host::ng-deep .p-toast .p-toast-message.p-toast-message-error .p-toast-message-icon,
+.p-toast .p-toast-message.p-toast-message-error .p-toast-icon-close {
+  margin-left: 5px;
+}
+
+:host::ng-deep .p-inputtext {
+  color: #777;
+  font-size: 12px;
+  font-family: IRANSans_Bold !important;
+}
+
+:host::ng-deep .p-inputtext::placeholder {
+  color: #777;
+  font-size: 12px;
+  padding-right: 5px;
+  font-family: IRANSans_Bold !important;
+}
+
+@media screen and (max-width: 767px) {
+  :host::ng-deep .p-toast {
+    width: 90% !important;
+  }
+}
+
+.login ul li {
+  font-size: 14px;
+  font-family: IRANSans_Light !important;
+}
+
+input,
+:host::ng-deep .p-inputtext,
+:host::ng-deep .p-dropdown,
+:host::ng-deep .p-chips,
+.p-inputtext,
+.p-dropdown,
+.p-chips,
+textarea {
+  width: 100% !important;
+}
+
+.verify {
+  padding: 5px 45px;
+}
+
+.verify p {
+  color: #777;
+  font-size: 14px;
+  font-family: IRANSans_Bold !important;
+  text-align: center;
+}
+
+.verify a {
+  color: #20b66f;
+  font-size: 14px;
+  font-family: IRANSans_Bold !important;
+}
+:host::ng-deep .p-dialog .p-dialog-content {
+  border-color: red;
+ // background-color: #e5f1e7 !important;
+}
+:host::ng-deep .p-dialog .p-dialog-content {
+  border-color: red;
+  //background-color: #e5f1e7 !important;
+}

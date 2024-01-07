@@ -1,0 +1,19 @@
+<section id="faq" class="faq container mb-4 wow fadeInUp">
+        <h1 class="text-center">سوالات متداول</h1>
+        <div class="row align-items-center">
+            <div class="col-lg-5 text-center text-lg-start">
+                <img class="img-fluid animated zoomIn" src="../../../assets/images/man-thinking-animate.svg" alt="">
+            </div>
+            <div class="col-lg-7 Accordion">
+                <p-accordion [toggleable]="true" iconPos="left" collapseIcon="pi pi-angle-down"
+                    expandIcon="pi pi-angle-left">
+                    <p-accordionTab *ngFor="let item of faqs">
+                        <ng-template pTemplate="header">
+                            {{item.question}}
+                        </ng-template>
+                        {{item.reply}}
+                    </p-accordionTab>
+                </p-accordion>
+            </div>
+        </div>
+</section>

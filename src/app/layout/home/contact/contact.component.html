@@ -1,0 +1,125 @@
+<p-toast position="center"></p-toast>
+<section id="contact">
+    <div class="container-xxl">
+        <div class="container">
+            <div class="text-center mx-auto pb-4 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                <h1 class="mb-5">تماس با ما</h1>
+            </div>
+            <div class="row gy-5 gx-4">
+                <div class="col-lg-3 col-md-6  wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item d-flex h-70">
+
+                        <div class="service-text">
+                            <div class="service-icon">
+                                <i class="pi pi-phone "></i>
+                            </div>
+                            <h3 class="mr-1"> تلفن:</h3>
+                            <p class="mb-1">06633425241</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item d-flex h-70">
+                        <div class="service-text">
+                            <div class="service-icon">
+                                <i class="pi pi-map-marker"></i>
+                            </div>
+                            <h3 class="mr-1">آدرس:</h3>
+                            <p class="mb-1">پارک علم و فناوری مرکز رشد فناور</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item d-flex h-70">
+                        <div class="service-text">
+                            <div class="service-icon">
+                                <i class='bx bx-envelope'></i>
+                            </div>
+                            <h3 class="mr-1">ایمیل:</h3>
+                            <p class="mb-1">info@khorram-madar.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item d-flex h-70">
+                        <div class="service-text">
+                            <div class="service-icon">
+                                <i class="pi pi-send"></i>
+                            </div>
+                            <h3> تلگرام:</h3>
+                            <p class="mb-1">KGE_PCB@</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="contact">
+    <div class="contact1  wow wow fadeInUp">
+        <div class="container-contact1  wow wow fadeInUp">
+            <div class="contact1-pic js-tilt" data-tilt>
+                <img src="../../../../assets/images/contact-us-animate.svg" alt="IMG">
+            </div>
+            <form class="contact1-form validate-form  wow wow fadeInUp" [formGroup]="form"
+                (ngSubmit)="registerContactUs()">
+                <div class="wrap-input1 validate-input" data-validate="Name is required">
+                    <input class="input1" type="text" formControlName="fullName" placeholder="نام و نام خانوادگی">
+                    <span class="shadow-input1"></span>
+                    <ul class="mt-1 text-center text-danger list-inline" *ngFor="let error of errorMessages.fullName">
+                        <li *ngIf="form.get('fullName').hasError(error.type) &&
+                          (form.get('fullName').dirty || form.get('fullName').touched)">
+                            {{ error.message }}
+                        </li>
+                    </ul>
+                </div>
+                <div class="wrap-input1 validate-input" data-validate="Name is required">
+                    <input class="input1" type="text" pKeyFilter="num" maxlength="11" minlength="11"
+                        formControlName="mobile" placeholder="شماره همراه">
+                    <span class="shadow-input1"></span>
+                    <ul class="mt-1 text-center text-danger list-inline" *ngFor="let error of errorMessages.mobile">
+                        <li *ngIf="form.get('mobile').hasError(error.type) &&
+                          (form.get('mobile').dirty || form.get('mobile').touched)">
+                            {{ error.message }}
+                        </li>
+                    </ul>
+                </div>
+                <div class="wrap-input1 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+                    <input class="input1" type="email" formControlName="email" placeholder="ایمیل" required>
+                    <span class="shadow-input1"></span>
+                    <ul class="mt-1 text-center text-danger list-inline" *ngFor="let error of errorMessages.email">
+                        <li *ngIf="form.get('email').hasError(error.type) &&
+                          (form.get('email').dirty || form.get('email').touched)">
+                            {{ error.message }}
+                        </li>
+                    </ul>
+                </div>
+                <div class="wrap-input1 validate-input" data-validate="Subject is required">
+                    <input class="input1" type="text" formControlName="title" placeholder="موضوع">
+                    <span class="shadow-input1"></span>
+                    <ul class="mt-1 text-center text-danger list-inline" *ngFor="let error of errorMessages.title">
+                        <li *ngIf="form.get('title').hasError(error.type) &&
+                          (form.get('title').dirty || form.get('title').touched)">
+                            {{ error.message }}
+                        </li>
+                    </ul>
+                </div>
+                <div class="wrap-input1 validate-input" data-validate="Message is required">
+                    <textarea class="input1" formControlName="message" placeholder="پیغام"></textarea>
+                    <span class="shadow-input1"></span>
+                    <ul class="mt-1 text-center text-danger list-inline" *ngFor="let error of errorMessages.message">
+                        <li *ngIf="form.get('message').hasError(error.type) &&
+                          (form.get('message').dirty || form.get('message').touched)">
+                            {{ error.message }}
+                        </li>
+                    </ul>
+                </div>
+                <div class="row p-3 mt-3 mb-4 align-items-center text-center">
+                    <button pButton label="ارسال" [disabled]="form.invalid"></button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</section>

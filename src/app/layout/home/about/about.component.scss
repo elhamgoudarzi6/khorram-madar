@@ -1,0 +1,26 @@
+img {
+  max-width: 270px;
+}
+
+.text {
+  font-family: 'IRANSans_Bold' !important;
+  font-size: 22px;
+}
+
+p {
+  font-family: 'IRANSans_Light' !important;
+  font-size: 17px;
+  line-height: 30px;
+  text-align: justify;
+}
+
+@media (max-width: 991px) {
+  .text {
+    font-size: 20px;
+  }
+  
+  p {
+    font-size: 16px;
+    padding: 5px 10px;
+  }
+}

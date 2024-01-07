@@ -1,0 +1,53 @@
+<section class="login container">
+  <div class="row justify-content-center align-items-center mt-5">
+    <div class="col-lg-6">
+      <form [formGroup]="form" (ngSubmit)="sendSMS()">
+        <p-panel>
+          <ng-template pTemplate="header">
+            <img src="../../../assets/images/khorram.png" class="img-fluid " alt="" />
+          </ng-template>
+          <div class="row align-items-center ">
+            <div class="col-lg-12 px-lg-5 mt-5">
+              <input pInputText type="text" pKeyFilter="num" placeholder="شماره همراه" formControlName="mobile"
+                class="form-control" maxlength="11" minlength="11" name="mobile">
+              <ul class="mt-1 text-center text-danger list-inline" *ngFor="let error of errorMessages.mobile">
+                <li *ngIf="form.get('mobile').hasError(error.type) &&
+                  (form.get('mobile').dirty || form.get('mobile').touched)">
+                  {{ error.message }}
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="mt-3 mb-4 align-items-center text-center">
+            <p-button type="submit" label="ورود" styleClass="p-button-rounded" [disabled]="!form.valid"></p-button>
+          </div>
+          <ng-template pTemplate="footer">
+            <a routerLink="">بازگشت</a>
+          </ng-template>
+        </p-panel>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+<p-dialog [(visible)]="display">
+  <div class="verify">
+    <p>یک کد تایید به شماره همراه شما ارسال شد</p>
+    <form [formGroup]="verifyForm" (ngSubmit)="onVerifyCode()">
+      <div class="mt-4 mb-3 align-items-center text-center">
+        <input type="text" pInputText maxlength="5" minlength="5" formControlName="code" />
+        <p class="mt-3">{{ timer }}</p>
+      </div>
+      <div class="mb-4 align-items-center text-center">
+        <p-button [disabled]="!verifyForm.valid" type="submit" label="تایید" styleClass="p-button-rounded"></p-button>
+      </div>
+    </form>
+    <div class="mt-2 text-center">
+      <p class="text-danger" *ngIf="invalidSMS">
+        کد وارد شده اشتباه می باشد.
+      </p>
+      <a (click)="sendSMS()" *ngIf="resendSMS">ارسال مجدد کد</a>
+    </div>
+  </div>
+</p-dialog>
