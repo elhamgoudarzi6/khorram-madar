@@ -104,7 +104,7 @@ export class AddOrderComponent {
   }
 
   getUsers(): any {
-    this.service.getAllUsers(this.localStorage.userToken).subscribe((response: any) => {
+    this.service.getUsers(this.localStorage.userToken).subscribe((response: any) => {
       if (response.success === true) {
         this.users = response.data;
       } else {
@@ -135,7 +135,7 @@ export class AddOrderComponent {
   submitForm(): void {
     console.log(this.form.value);
     
-    this.service.registerOrder(this.localStorage.userToken, this.form.value).subscribe((response: any) => {
+    this.service.addOrder(this.localStorage.userToken, this.form.value).subscribe((response: any) => {
       if (response.success === true) {
        // this.sendSms(response.data.code);
         this.ref.close(true);

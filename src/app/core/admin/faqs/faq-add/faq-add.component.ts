@@ -42,7 +42,7 @@ export class FaqAddComponent implements OnInit {
   }
 
   submitForm(): void {
-    this.service.registerFaq(this.localStorage.userToken, this.form.value).subscribe((response: any) => {
+    this.service.addFaq(this.localStorage.userToken, this.form.value).subscribe((response: any) => {
       if (response.success === true) {
         this.ref.close(true);
       } else {

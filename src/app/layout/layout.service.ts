@@ -21,7 +21,7 @@ export class LayoutService {
     return this.http.post(this.baseUrl + 'authUser', data);
   }
 
-  uploadFile(data: any): any {
+  upload(data: any): any {
     return this.http.post(this.baseUrl + 'upload', data);
   }
 
@@ -29,38 +29,42 @@ export class LayoutService {
     return this.http.post(this.baseUrl + 'multiUpload', data);
   }
 
-  updateUser(token: string, id: string, data: any): any {
+  editUser(token: string, id: string, data: any): any {
     const params = new HttpParams().set('token', token);
-    return this.http.put(this.baseUrl + 'updateUser/' + id, data, { params });
+    return this.http.put(this.baseUrl + 'editUser/' + id, data, { params });
+  }
+  getFaqs(): any {
+    return this.http.get(this.baseUrl + 'getFaqs');
+  }
+  getGallery(): any {
+    return this.http.get(this.baseUrl + 'getGallery');
+  }
+  getPlans(): any {
+    return this.http.get(this.baseUrl + 'getPlans');
+  }
+  addReserve(token: string, data: any): any {
+    const params = new HttpParams().set('token', token);
+    return this.http.post(this.baseUrl + 'addReserve', data, { params });
+  }
+  addContactMessage(data: any): any {
+    return this.http.post(this.baseUrl + 'addContactMessage', data);
   }
 
-  getUser(token: string, id: string): any {
+  addOrder(token: string, data: any): any {
     const params = new HttpParams().set('token', token);
-    return this.http.get(this.baseUrl + 'getUser/' + id, { params });
-  }
-  getAllFaq(): any {
-    return this.http.get(this.baseUrl + 'getAllFaq');
-  }
-  getAllGallery(): any {
-    return this.http.get(this.baseUrl + 'getAllGallery');
-  }
-  registerOrder(token: string, data: any): any {
-    const params = new HttpParams().set('token', token);
-    return this.http.post(this.baseUrl + 'registerOrder', data, { params });
+    return this.http.post(this.baseUrl + 'addOrder', data, { params });
   }
 
-  registerContactUs(data: any): any {
-    return this.http.post(this.baseUrl + 'registerContactUs', data);
-  }
-
-    registerRating(data: any): any {
+  addRating(data: any): any {
     //const params = new HttpParams().set('token', token);
-    return this.http.post(this.baseUrl + 'registerRating', data);
+    return this.http.post(this.baseUrl + 'addRating', data);
   }
   getRating(): any {
     return this.http.get(this.baseUrl + 'getRating');
   }
   getRatingByCode(id: string): any {
-    return this.http.get(this.baseUrl + 'getRating/' + id);
+    return this.http.get(this.baseUrl + 'getRatingByCode/' + id);
   }
 }
+
+

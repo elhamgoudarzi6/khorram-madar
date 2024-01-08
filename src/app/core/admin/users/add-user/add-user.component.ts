@@ -42,7 +42,7 @@ export class AddUserComponent implements OnInit{
     const formData = new FormData();
     formData.append('file', event.files[0], event.files[0].name);
     this.service
-      .uploadFile(formData)
+      .upload(formData)
       .subscribe((response:any) => {
         if (response.success === true) {
           this.form.controls.image.setValue(response.imagePath);
@@ -63,7 +63,7 @@ export class AddUserComponent implements OnInit{
 
   submitForm(): void {
     this.service
-      .registerUser(this.localStorage.userToken, this.form.value)
+      .addUser(this.localStorage.userToken, this.form.value)
       .subscribe((response: { success: boolean; data: any; }) => {
         if (response.success === true) {
           this.ref.close(true);

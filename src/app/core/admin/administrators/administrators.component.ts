@@ -33,7 +33,7 @@ export class AdministratorsComponent implements OnInit {
   }
 
   getAdmins(): any {
-    this.service.getAllAdmins(this.localStorage.userToken).subscribe((response: { success: boolean; data: any[] | undefined; }) => {
+    this.service.getAdmins(this.localStorage.userToken).subscribe((response: { success: boolean; data: any[] | undefined; }) => {
       if (response.success === true) {
         this.admins = response.data;
       } else {

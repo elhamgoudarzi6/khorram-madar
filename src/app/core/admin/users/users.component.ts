@@ -31,7 +31,7 @@ export class UsersComponent implements OnInit {
   }
 
   getUsers(): any {
-    this.service.getAllUsers(this.localStorage.userToken).subscribe((response: any) => {
+    this.service.getUsers(this.localStorage.userToken).subscribe((response: any) => {
       if (response.success === true) {
         this.users = response.data;
       } else {

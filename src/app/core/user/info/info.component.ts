@@ -56,7 +56,7 @@ export class InfoComponent {
 
   submitForm(): void {
     this.service
-      .updateUser(this.localStorage.userToken, this.localStorage.userID, this.form.value)
+      .editUser(this.localStorage.userToken, this.localStorage.userID, this.form.value)
       .subscribe((response: any) => {
         if (response.success === true) {
           this.messageService.add({

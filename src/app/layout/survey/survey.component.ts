@@ -96,7 +96,7 @@ export class SurveyComponent implements OnInit {
       rating: this.data,
       other: this.other
     }
-    this.service.registerRating(data).subscribe((response: any) => {
+    this.service.addRating(data).subscribe((response: any) => {
       if (response.success === true) {
         this.other = '';
         this.messageService.add({

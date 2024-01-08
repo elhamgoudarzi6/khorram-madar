@@ -59,7 +59,7 @@ export class AdministratorAddComponent implements OnInit {
     const formData = new FormData();
     formData.append("file", file, file.name);
     this.service
-      .uploadFile(formData)
+      .upload(formData)
       .subscribe((response: { success: boolean; imagePath: any; data: any; }) => {
         if (response.success === true) {
           this.form.controls.image.setValue(response.imagePath);

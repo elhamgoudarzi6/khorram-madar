@@ -53,7 +53,7 @@ export class AdministratorSecurityComponent implements OnInit {
 
   changeUsername(): void {
     this.service
-      .changeUsername(
+      .editAdmin(
         this.localStorage.userToken,
         this.admin._id,
         this.usernameForm.value
@@ -77,7 +77,7 @@ export class AdministratorSecurityComponent implements OnInit {
 
   changePassword(): void {
     this.service
-      .changePassword(
+      .editAdmin(
         this.localStorage.userToken,
         this.admin._id,
         this.passwordForm.value

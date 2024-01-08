@@ -48,7 +48,7 @@ export class AdministratorEditComponent implements OnInit {
     const formData = new FormData();
     formData.append("file", file, file.name);
     this.service
-      .uploadFile(formData)
+      .upload(formData)
       .subscribe((response:any) => {
         if (response.success === true) {
           this.form.controls.image.setValue(response.imagePath);
@@ -67,7 +67,7 @@ export class AdministratorEditComponent implements OnInit {
 
   submitForm(): void {
     this.service
-      .updateAdmin(this.localStorage.userToken, this.admin._id, this.form.value)
+      .editAdmin(this.localStorage.userToken, this.admin._id, this.form.value)
       .subscribe((response: { success: boolean; data: any; }) => {
         if (response.success === true) {
           this.ref.close(true);

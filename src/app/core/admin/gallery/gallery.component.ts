@@ -30,7 +30,7 @@ export class GalleryComponent implements OnInit {
   }
  
   getGallery(): any {
-    this.service.getAllGallery(this.localStorage.userToken).subscribe((response: any) => {
+    this.service.getGallery(this.localStorage.userToken).subscribe((response: any) => {
       if (response.success === true) {
         this.images = response.data;
       } else {

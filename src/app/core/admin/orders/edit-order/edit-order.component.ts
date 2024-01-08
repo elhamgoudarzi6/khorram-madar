@@ -116,7 +116,7 @@ export class EditOrderComponent {
   }
 
   getUsers(): any {
-    this.service.getAllUsers(this.localStorage.userToken).subscribe((response: any) => {
+    this.service.getUsers(this.localStorage.userToken).subscribe((response: any) => {
       if (response.success === true) {
         this.users = response.data;
       } else {
@@ -125,7 +125,7 @@ export class EditOrderComponent {
     });
   }
   submitForm(): void {
-    this.service.updateOrder(this.localStorage.userToken, this.order._id, this.form.value).subscribe((response: any) => {
+    this.service.editOrder(this.localStorage.userToken, this.order._id, this.form.value).subscribe((response: any) => {
       if (response.success === true) {
         this.ref.close(true);
       } else {

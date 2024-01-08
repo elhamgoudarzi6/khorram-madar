@@ -38,7 +38,7 @@ export class EditUserComponent implements OnInit{
   }
   submitForm(): void {
     this.service
-      .updateUser(this.localStorage.userToken, this.user._id, this.form.value)
+      .editUser(this.localStorage.userToken, this.user._id, this.form.value)
       .subscribe((response:any) => {
         if (response.success === true) {
           this.ref.close(true);
@@ -56,7 +56,7 @@ export class EditUserComponent implements OnInit{
     const formData = new FormData();
     formData.append('file', event.files[0], event.files[0].name);
     this.service
-      .uploadFile(formData)
+      .upload(formData)
       .subscribe((response:any) => {
         if (response.success === true) {
           this.form.controls.image.setValue(response.imagePath);

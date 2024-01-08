@@ -35,7 +35,7 @@ export class FaqsComponent implements OnInit {
     });
   }
   getFaqs(): any {
-    this.service.getAllFaq(this.localStorage.userToken).subscribe((response: any) => {
+    this.service.getFaqs(this.localStorage.userToken).subscribe((response: any) => {
       if (response.success === true) {
         this.faqs = response.data;
       } else {
@@ -49,7 +49,7 @@ export class FaqsComponent implements OnInit {
   }
 
   updateFaq(id: any) {
-    this.service.updateFaq(this.localStorage.userToken, id, this.form.value).subscribe((response: any) => {
+    this.service.editFaq(this.localStorage.userToken, id, this.form.value).subscribe((response: any) => {
       if (response.success === true) {
         this.messageService.add({
           severity: 'success',

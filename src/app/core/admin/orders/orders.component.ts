@@ -32,7 +32,7 @@ export class OrdersComponent implements OnInit {
   }
 
   getOrders(): any {
-    this.service.getAllOrder(this.localStorage.userToken).subscribe((response: any) => {
+    this.service.getOrders(this.localStorage.userToken).subscribe((response: any) => {
       if (response.success === true) {
         this.orders = response.data;
       } else {

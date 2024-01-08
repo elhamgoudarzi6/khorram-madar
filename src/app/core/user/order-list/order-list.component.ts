@@ -33,7 +33,7 @@ export class OrderListComponent implements OnInit {
   }
 
   getOrders(): any {
-    this.service.getAllOrderByUser(this.localStorage.userToken, this.localStorage.userID).subscribe((response: any) => {
+    this.service.getOrdersByUser(this.localStorage.userToken, this.localStorage.userID).subscribe((response: any) => {
       if (response.success === true) {
         this.orders = response.data;
       } else {
@@ -106,7 +106,7 @@ export class OrderListComponent implements OnInit {
       acceptLabel: 'بله',
       defaultFocus: 'reject',
       accept: () => {
-        this.service.updateOrder(this.localStorage.userToken, id, data).subscribe((response: any) => {
+        this.service.editOrder(this.localStorage.userToken, id, data).subscribe((response: any) => {
           if (response.success === true) {
             this.confirmationService.close();
             this.messageService.add({

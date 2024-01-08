@@ -26,7 +26,7 @@ export class ContactComponent implements OnInit {
 
   getMessages(): any {
     this.service
-      .getAllContactUs(this.localStorage.userToken)
+      .getContactMessages(this.localStorage.userToken)
       .subscribe((response: any) => {
         if (response.success === true) {
           this.messages = response.data;
@@ -53,7 +53,7 @@ export class ContactComponent implements OnInit {
       accept: () => {
         // delete from db
         this.service
-          .deleteContactUs(this.localStorage.userToken, id)
+          .deleteContactMessage(this.localStorage.userToken, id)
           .subscribe((response: any) => {
             if (response.success === true) {
               this.confirmationService.close();

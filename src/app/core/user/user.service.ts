@@ -17,17 +17,23 @@ export class UserService {
     };
     return this.http.post('https://api.sms.ir/v1/send/verify', data, { 'headers': headers });
   }
-  updateUser(token: string, id: string, data: any): any {
-    const params = new HttpParams().set('token', token);
-    return this.http.put(this.baseUrl + 'updateUser/' + id, data, { params });
+
+  upload(data: any): any {
+    return this.http.post(this.baseUrl + 'upload', data);
   }
+
   multiUpload(data: any): any {
     return this.http.post(this.baseUrl + 'multiUpload', data);
   }
 
-  getAllOrderByUser(token: string, id: string): any {
+  editUser(token: string, id: string, data: any): any {
     const params = new HttpParams().set('token', token);
-    return this.http.get(this.baseUrl + 'getAllOrderByUser/' + id, { params });
+    return this.http.put(this.baseUrl + 'editUser/' + id, data, { params });
+  }
+
+  getOrdersByUser(token: string, id: string): any {
+    const params = new HttpParams().set('token', token);
+    return this.http.get(this.baseUrl + 'getOrdersByUser/' + id, { params });
   }
 
   getUser(token: string, id: string): any {
@@ -35,17 +41,13 @@ export class UserService {
     return this.http.get(this.baseUrl + 'getUser/' + id, { params });
   }
 
-  uploadFile(data: any): any {
-    return this.http.post(this.baseUrl + 'upload', data);
-  }
-
-  registerOrder(token: string, data: any): any {
+  addOrder(token: string, data: any): any {
     const params = new HttpParams().set('token', token);
-    return this.http.post(this.baseUrl + 'registerOrder', data, { params });
+    return this.http.post(this.baseUrl + 'addOrder', data, { params });
   }
-  updateOrder(token: string, id: string, data: any): any {
+  editOrder(token: string, id: string, data: any): any {
     const params = new HttpParams().set('token', token);
-    return this.http.put(this.baseUrl + 'updateOrder/' + id, data, { params });
+    return this.http.put(this.baseUrl + 'editOrder/' + id, data, { params });
   }
 }
 

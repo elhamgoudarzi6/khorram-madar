@@ -27,7 +27,7 @@ export class GalleryAddComponent implements OnInit {
   
   createForm() {
     this.form = new FormGroup({
-      image: new FormControl(null),
+      url: new FormControl(null),
     });
   }
 
@@ -35,10 +35,10 @@ export class GalleryAddComponent implements OnInit {
     const formData = new FormData();
     formData.append('file', event.files[0], event.files[0].name);
     this.service
-      .uploadFile(formData)
+      .upload(formData)
       .subscribe((response:any) => {
         if (response.success === true) {
-          this.form.controls.image.setValue(response.imagePath);
+          this.form.controls.url.setValue(response.imagePath);
           this.messageService.add({
             severity: 'success',
             summary: 'آپلود شد ',
@@ -59,7 +59,7 @@ export class GalleryAddComponent implements OnInit {
     console.log(this.form.value);
     
     this.service
-      .registerGallery(this.localStorage.userToken, this.form.value)
+      .addGallery(this.localStorage.userToken, this.form.value)
       .subscribe((response:any) => {
         if (response.success === true) {
           this.ref.close(true);

@@ -18,82 +18,82 @@ export class AdminService {
     };
     return this.http.post('https://api.sms.ir/v1/send/verify', data, { 'headers': headers });
   }
-  uploadFile(data: any): any {
+  upload(data: any): any {
     return this.http.post(this.baseUrl + 'upload', data);
   }
+
   multiUpload(data: any): any {
     return this.http.post(this.baseUrl + 'multiUpload', data);
   }
 
 
   login(data: any): any {
-    return this.http.post(this.baseUrl + 'loginAdmin', data);
+    return this.http.post(this.baseUrl + 'login', data);
   }
 
-  getAllUsers(token: string): any {
+  getUsers(token: string): any {
     const params = new HttpParams().set('token', token);
-    return this.http.get(this.baseUrl + 'getAllUser', { params });
+    return this.http.get(this.baseUrl + 'getUsers', { params });
   }
-  getAllOrder(token: string): any {
+  getOrders(token: string): any {
     const params = new HttpParams().set('token', token);
-    return this.http.get(this.baseUrl + 'getAllOrder', { params });
-  }
-
-  registerFaq(token: string, data: any): any {
-    const params = new HttpParams().set('token', token);
-    return this.http.post(this.baseUrl + 'registerFaq', data, { params });
+    return this.http.get(this.baseUrl + 'getOrders', { params });
   }
 
-  updateFaq(token: string, id: string, data: any): any {
+  addFaq(token: string, data: any): any {
     const params = new HttpParams().set('token', token);
-    return this.http.put(this.baseUrl + 'updateFaq/' + id, data, { params });
+    return this.http.post(this.baseUrl + 'addFaq', data, { params });
+  }
+
+  editFaq(token: string, id: string, data: any): any {
+    const params = new HttpParams().set('token', token);
+    return this.http.put(this.baseUrl + 'editFaq/' + id, data, { params });
   }
   deleteFaq(token: string, id: string): any {
     const params = new HttpParams().set('token', token);
     return this.http.delete(this.baseUrl + 'deleteFaq/' + id, { params });
   }
-  getAllFaq(token: string): any {
+  getFaqs(token: string): any {
     const params = new HttpParams().set('token', token);
-    return this.http.get(this.baseUrl + 'getAllFaq', { params });
+    return this.http.get(this.baseUrl + 'getFaqs', { params });
   }
-  getAllContactUs(token: string): any {
+  getContactMessages(token: string): any {
     const params = new HttpParams().set('token', token);
-    return this.http.get(this.baseUrl + 'getAllContactUs', { params });
+    return this.http.get(this.baseUrl + 'getContactMessages', { params });
   }
-  deleteContactUs(token: string, id: string): any {
+  deleteContactMessage(token: string, id: string): any {
     const params = new HttpParams().set('token', token);
-    return this.http.delete(this.baseUrl + 'deleteContactUs/' + id, { params });
+    return this.http.delete(this.baseUrl + 'deleteContactMessage/' + id, { params });
   }
-  registerUser(token: string, data: any): any {
+  addUser(token: string, data: any): any {
     const params = new HttpParams().set('token', token);
-    return this.http.post(this.baseUrl + 'registerUser', data, { params });
+    return this.http.post(this.baseUrl + 'addUser', data, { params });
   }
-  registerOrder(token: string, data: any): any {
+  addOrder(token: string, data: any): any {
     const params = new HttpParams().set('token', token);
-    return this.http.post(this.baseUrl + 'registerOrder', data, { params });
+    return this.http.post(this.baseUrl + 'addOrder', data, { params });
   }
-
-  registerGallery(token: string, data: any): any {
+  addGallery(token: string, data: any): any {
     const params = new HttpParams().set('token', token);
-    return this.http.post(this.baseUrl + 'registerGallery', data, { params });
+    return this.http.post(this.baseUrl + 'addGallery', data, { params });
   }
   deleteGallery(token: string, id: string): any {
     const params = new HttpParams().set('token', token);
     return this.http.delete(this.baseUrl + 'deleteGallery/' + id, { params });
   }
-  getAllGallery(token: string): any {
+  getGallery(token: string): any {
     const params = new HttpParams().set('token', token);
-    return this.http.get(this.baseUrl + 'getAllGallery', { params });
+    return this.http.get(this.baseUrl + 'getGallery', { params });
   }
 
 
-  updateUser(token: string, id: string, data: any): any {
+  editUser(token: string, id: string, data: any): any {
     const params = new HttpParams().set('token', token);
-    return this.http.put(this.baseUrl + 'updateUser/' + id, data, { params });
+    return this.http.put(this.baseUrl + 'editUser/' + id, data, { params });
   }
-  updateOrder(token: string, id: string, data: any): any {
+  editOrder(token: string, id: string, data: any): any {
     const params = new HttpParams().set('token', token);
-    return this.http.put(this.baseUrl + 'updateOrder/' + id, data, { params });
+    return this.http.put(this.baseUrl + 'editOrder/' + id, data, { params });
   }
 
   deleteUser(token: string, id: string): any {
@@ -111,33 +111,22 @@ export class AdminService {
 
 
   //#region Admins
-  getAllAdmins(token: string): any {
+  getAdmins(token: string): any {
     const params = new HttpParams().set('token', token);
-    return this.http.get(this.baseUrl + 'getAllAdmin', { params });
+    return this.http.get(this.baseUrl + 'getAdmins', { params });
   }
   addAdmin(token: string, data: any): any {
     const params = new HttpParams().set('token', token);
-    return this.http.post(this.baseUrl + 'registerAdmin', data, { params });
+    return this.http.post(this.baseUrl + 'addAdmin', data, { params });
   }
-  updateAdmin(token: string, id: string, data: any): any {
+  editAdmin(token: string, id: string, data: any): any {
     const params = new HttpParams().set('token', token);
-    return this.http.put(this.baseUrl + 'updateAdmin/' + id, data, { params });
+    return this.http.put(this.baseUrl + 'editAdmin/' + id, data, { params });
   }
   deleteAdmin(token: string, id: string): any {
     const params = new HttpParams().set('token', token);
     return this.http.delete(this.baseUrl + 'deleteAdmin/' + id, { params });
   }
-  changePassword(token: string, id: any, data: any): any {
-    const params = new HttpParams().set('token', token);
-    return this.http.put(this.baseUrl + 'changePassword/' + id, data, { params });
-  }
-  changeUsername(token: string, id: any, data: any): any {
-    const params = new HttpParams().set('token', token);
-    return this.http.put(this.baseUrl + 'changeUsername/' + id, data, { params });
-  }
-
   //#endregion
-
-
 
 }

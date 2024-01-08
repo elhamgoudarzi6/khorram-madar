@@ -35,7 +35,7 @@ export class EditOrderComponent {
     { name: 'CNC' },
   ];
 
-  carbonPrinting = [{title: 'خیر' }, {title: 'بله' }];
+  carbonPrinting = [{ title: 'خیر' }, { title: 'بله' }];
 
   materials = [
     { title: "XPC (استخوانی - فنلیک)" },
@@ -67,7 +67,7 @@ export class EditOrderComponent {
 
   partsColor = [{ title: " سفید" }, { title: " مشکی " }];
 
-  eTest = [ { title: " خیر " },{ title: " بله" }];
+  eTest = [{ title: " خیر " }, { title: " بله" }];
 
   finalCutList = "";
 
@@ -114,7 +114,7 @@ export class EditOrderComponent {
   }
 
   submitForm(): void {
-    this.service.updateOrder(this.localStorage.userToken, this.order._id, this.form.value).subscribe((response: any) => {
+    this.service.editOrder(this.localStorage.userToken, this.order._id, this.form.value).subscribe((response: any) => {
       if (response.success === true) {
         this.ref.close(true);
       } else {

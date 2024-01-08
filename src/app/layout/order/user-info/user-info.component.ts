@@ -46,7 +46,7 @@ export class UserInfoComponent implements OnInit {
   }
 
   submitForm(): void {
-    this.service.updateUser(this.localStorage.userToken, this.localStorage.userID, this.form.value).subscribe((response: any) => {
+    this.service.editUser(this.localStorage.userToken, this.localStorage.userID, this.form.value).subscribe((response: any) => {
       if (response.success === true) {
         this.router.navigateByUrl('/order/orderinfo');
       } else {

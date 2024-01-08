@@ -14,7 +14,7 @@ export class FaqComponent implements OnInit {
   }
 
   getFaqs() {
-    this.service.getAllFaq()
+    this.service.getFaqs()
       .subscribe((response: any) => {
         if (response.success === true) {
           this.faqs = response.data;

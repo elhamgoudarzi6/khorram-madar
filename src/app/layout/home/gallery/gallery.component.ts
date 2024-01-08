@@ -47,7 +47,7 @@ export class GalleryComponent implements OnInit {
   }
   getGallery(): any {
     this.service
-      .getAllGallery()
+      .getGallery()
       .subscribe((response: any) => {
         if (response.success === true) {
           this.images = response.data;

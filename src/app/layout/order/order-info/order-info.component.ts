@@ -118,7 +118,7 @@ export class OrderInfoComponent {
       });
     }
     else {
-      this.service.registerOrder(this.localStorage.userToken, this.form.value).subscribe((response: any) => {
+      this.service.addOrder(this.localStorage.userToken, this.form.value).subscribe((response: any) => {
         if (response.success === true) {
           this.sendSms(response.data.code);
           this.messageService.add({

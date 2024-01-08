@@ -32,7 +32,7 @@ export class ContactComponent implements OnInit {
   };
 
   registerContactUs() {
-    this.service.registerContactUs(this.form.value)
+    this.service.addContactMessage(this.form.value)
       .subscribe((response: any) => {
         if (response.success === true) {
           this.messageService.add({
